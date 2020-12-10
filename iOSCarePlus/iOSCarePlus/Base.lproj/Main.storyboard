@@ -1,24 +1,106 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="swj-2e-kPs">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17505"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="iOSCarePlus" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="homeBackground" translatesAutoresizingMaskIntoConstraints="NO" id="BcA-eB-GtX">
+                                <rect key="frame" x="0.0" y="0.0" width="2071" height="896"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="96S-9a-pVx">
+                                <rect key="frame" x="25" y="61" width="80" height="0.0"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wDy-Cr-pvs">
+                                        <rect key="frame" x="9" y="-200" width="62" height="177"/>
+                                        <string key="text">Nintendo
+Store</string>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="14"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.8784313725490196" green="0.066666666666666666" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="wDy-Cr-pvs" firstAttribute="top" secondItem="96S-9a-pVx" secondAttribute="top" constant="-200" id="6J5-JS-XG6"/>
+                                    <constraint firstAttribute="trailing" secondItem="wDy-Cr-pvs" secondAttribute="trailing" constant="9" id="AiS-0h-2Hb"/>
+                                    <constraint firstAttribute="bottom" secondItem="wDy-Cr-pvs" secondAttribute="bottom" constant="23" id="EgV-o0-reT"/>
+                                    <constraint firstItem="wDy-Cr-pvs" firstAttribute="leading" secondItem="96S-9a-pVx" secondAttribute="leading" constant="9" id="ZeL-6K-uTc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="BcA-eB-GtX" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8yo-aO-tvG"/>
+                            <constraint firstItem="BcA-eB-GtX" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Ljv-xA-Ct0"/>
+                            <constraint firstItem="96S-9a-pVx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="XsD-Zu-Gju"/>
+                            <constraint firstAttribute="bottom" secondItem="BcA-eB-GtX" secondAttribute="bottom" id="maq-2m-J4J"/>
+                            <constraint firstItem="96S-9a-pVx" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="17" id="pev-UF-ah5"/>
+                        </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house" catalog="system" id="6RW-E5-8k6"/>
+                    <connections>
+                        <outlet property="backgroundImageViewLeadingConstraint" destination="8yo-aO-tvG" id="j9o-FT-0cw"/>
+                        <outlet property="logoView" destination="96S-9a-pVx" id="B4X-Iw-JaS"/>
+                        <outlet property="logoViewTopConstraint" destination="6J5-JS-XG6" id="wq4-B8-lV3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="928.98550724637687" y="-709.15178571428567"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="Xv2-Nt-gUi">
+            <objects>
+                <viewController id="CNn-9e-MQK" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="4GN-5t-gsj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="NTv-YD-KQc"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="xEZ-Fx-dAB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kas-dC-pu1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="929" y="-55"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="Bbt-3M-3ct">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="swj-2e-kPs" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="teE-lV-eil">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="oWZ-EC-36w"/>
+                        <segue destination="CNn-9e-MQK" kind="relationship" relationship="viewControllers" id="PWM-fy-IXE"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LN0-xd-pWF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-216" y="-453"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="homeBackground" width="2071" height="812"/>
+        <image name="house" catalog="system" width="128" height="106"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
