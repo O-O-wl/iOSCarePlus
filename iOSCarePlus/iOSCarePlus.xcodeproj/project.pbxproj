@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,12 @@
 		3916F4A52580B0DB00321003 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3916F4A32580B0DB00321003 /* Main.storyboard */; };
 		3916F4A72580B0DE00321003 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3916F4A62580B0DE00321003 /* Assets.xcassets */; };
 		3916F4AA2580B0DE00321003 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3916F4A82580B0DE00321003 /* LaunchScreen.storyboard */; };
+		3944D963258A2EAC00FDD746 /* NewGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3944D962258A2EAC00FDD746 /* NewGame.swift */; };
+		3944D968258A342200FDD746 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 3944D967258A342200FDD746 /* Kingfisher */; };
+		39582A08258A1F9A009C9FFB /* GameListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39582A07258A1F9A009C9FFB /* GameListViewController.swift */; };
+		39582A0F258A23E6009C9FFB /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39582A0E258A23E6009C9FFB /* Game.swift */; };
+		39582A12258A247B009C9FFB /* GameItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39582A11258A247B009C9FFB /* GameItemTableViewCell.swift */; };
+		39582A16258A2B31009C9FFB /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 39582A15258A2B31009C9FFB /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,10 @@
 		3916F4A62580B0DE00321003 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3916F4A92580B0DE00321003 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3916F4AB2580B0DE00321003 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3944D962258A2EAC00FDD746 /* NewGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewGame.swift; sourceTree = "<group>"; };
+		39582A07258A1F9A009C9FFB /* GameListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameListViewController.swift; sourceTree = "<group>"; };
+		39582A0E258A23E6009C9FFB /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		39582A11258A247B009C9FFB /* GameItemTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameItemTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3944D968258A342200FDD746 /* Kingfisher in Frameworks */,
+				39582A16258A2B31009C9FFB /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +68,43 @@
 		3916F49C2580B0DB00321003 /* iOSCarePlus */ = {
 			isa = PBXGroup;
 			children = (
+				39582A0B258A23A2009C9FFB /* Scenes */,
 				3916F49D2580B0DB00321003 /* AppDelegate.swift */,
 				3916F49F2580B0DB00321003 /* SceneDelegate.swift */,
-				3916F4A12580B0DB00321003 /* HomeViewController.swift */,
 				3916F4A32580B0DB00321003 /* Main.storyboard */,
 				3916F4A62580B0DE00321003 /* Assets.xcassets */,
 				3916F4A82580B0DE00321003 /* LaunchScreen.storyboard */,
 				3916F4AB2580B0DE00321003 /* Info.plist */,
 			);
 			path = iOSCarePlus;
+			sourceTree = "<group>";
+		};
+		39582A0B258A23A2009C9FFB /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				39582A0D258A23C0009C9FFB /* Home */,
+				39582A0C258A23B5009C9FFB /* GameList */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		39582A0C258A23B5009C9FFB /* GameList */ = {
+			isa = PBXGroup;
+			children = (
+				39582A07258A1F9A009C9FFB /* GameListViewController.swift */,
+				39582A0E258A23E6009C9FFB /* Game.swift */,
+				39582A11258A247B009C9FFB /* GameItemTableViewCell.swift */,
+				3944D962258A2EAC00FDD746 /* NewGame.swift */,
+			);
+			path = GameList;
+			sourceTree = "<group>";
+		};
+		39582A0D258A23C0009C9FFB /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				3916F4A12580B0DB00321003 /* HomeViewController.swift */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -84,6 +124,10 @@
 			dependencies = (
 			);
 			name = iOSCarePlus;
+			packageProductDependencies = (
+				39582A15258A2B31009C9FFB /* Alamofire */,
+				3944D967258A342200FDD746 /* Kingfisher */,
+			);
 			productName = iOSCarePlus;
 			productReference = 3916F49A2580B0DB00321003 /* iOSCarePlus.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +155,10 @@
 				Base,
 			);
 			mainGroup = 3916F4912580B0DB00321003;
+			packageReferences = (
+				39582A14258A2B31009C9FFB /* XCRemoteSwiftPackageReference "Alamofire" */,
+				3944D966258A342200FDD746 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+			);
 			productRefGroup = 3916F49B2580B0DB00321003 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -159,6 +207,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				39582A12258A247B009C9FFB /* GameItemTableViewCell.swift in Sources */,
+				39582A08258A1F9A009C9FFB /* GameListViewController.swift in Sources */,
+				3944D963258A2EAC00FDD746 /* NewGame.swift in Sources */,
+				39582A0F258A23E6009C9FFB /* Game.swift in Sources */,
 				3916F4A22580B0DB00321003 /* HomeViewController.swift in Sources */,
 				3916F49E2580B0DB00321003 /* AppDelegate.swift in Sources */,
 				3916F4A02580B0DB00321003 /* SceneDelegate.swift in Sources */,
@@ -311,6 +363,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8BQHKQSA4Y;
 				INFOPLIST_FILE = iOSCarePlus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -330,6 +383,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8BQHKQSA4Y;
 				INFOPLIST_FILE = iOSCarePlus/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -363,6 +417,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3944D966258A342200FDD746 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.15.8;
+			};
+		};
+		39582A14258A2B31009C9FFB /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3944D967258A342200FDD746 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3944D966258A342200FDD746 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		39582A15258A2B31009C9FFB /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 39582A14258A2B31009C9FFB /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3916F4922580B0DB00321003 /* Project object */;
 }
