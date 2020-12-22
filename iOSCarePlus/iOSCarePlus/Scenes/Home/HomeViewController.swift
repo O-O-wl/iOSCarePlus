@@ -8,7 +8,6 @@
 import UIKit
 
  final class HomeViewController: UIViewController {
-    
     @IBOutlet private weak var logoView: UIView!
     @IBOutlet private weak var logoViewTopConstraint: NSLayoutConstraint!
     @IBOutlet private weak var backgroundImageViewLeadingConstraint: NSLayoutConstraint!
